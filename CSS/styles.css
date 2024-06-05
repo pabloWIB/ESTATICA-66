@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
+
+* {
+  margin:0;
+  padding:0;
+  outline:none;
+  list-style:none;
+  text-decoration:none;
+  box-sizing:border-box;
+  color:#111;
+  background: transparent;
+  border:none;
+}
+
+body {
+  background: #111;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+section {
+  height: 100vh;
+  perspective: 700px;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+section .wrapper {
+  position: absolute;
+  top: 0;bottom: 0;
+  margin: auto;
+  left: 0;right: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg);
+  transform-origin: center;
+}
+
+section .project {
+  width: 32vw;
+  height: 18vw;
+  padding: 3%;
+  position: absolute;
+  transition: 0.4s all cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  cursor: pointer;
+  background: rgba(255,255,255,0.04);
+  transform-origin: center;
+}
+
+section .project h2 {
+  margin-bottom: 10px;
+  color: #fff;
+  opacity: 0.1;
+}
+section .project p {
+  line-height: 1.6;
+  color: #fff;
+  opacity: 0.1;
+}
+
+.proj1 {
+  top: 3%;
+  left: 50%;
+  transform: translateZ(-500px);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+.proj2 {
+  top: 10%;
+  left: 10%;
+  transform: translateZ(-220px);
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.proj3 {
+  top: 30%;
+  left: 30%;
+  transform: translateZ(-100px);
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+}
+
+.project:hover {
+  transform: translateZ(-50px);
+  filter: blur(0);
+  -webkit-filter:blur(0);
+  background: rgba(40,40,40,0.9);
+}
+
+.project:hover p, .project:hover h2 {
+  opacity: 1;
+}
